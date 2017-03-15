@@ -2,6 +2,9 @@ FROM debian:jessie
 
 ARG DOWNLOAD_URL
 
+RUN useradd --create-home --shell /bin/false --system --uid 1000 grafana
+RUN groupadd --gid 1000 grafana
+
 RUN apt-get update && \
     apt-get -y --no-install-recommends install libfontconfig curl ca-certificates && \
     apt-get clean && \
