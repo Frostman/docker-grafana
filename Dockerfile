@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-ARG DOWNLOAD_URL
+ARG DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/grafana-releases/master/grafana_latest_amd64.deb
 
 RUN useradd --create-home --shell /bin/false --system --uid 1000 grafana
 RUN groupadd --gid 1000 grafana
